@@ -1,0 +1,23 @@
+<div class="mushiny-container">
+  <div class="mushiny-nav">
+    <a ui-sref="main.mainMenu" href="#">{{'HOME' | translate }}</a>
+    <span>&nbsp;/&nbsp;{{'MASTER_DATA' | translate }}&nbsp;/&nbsp;{{'STORAGE_LOCATION' | translate }}</span>
+  </div>
+  <div style="margin-top:10px;">
+    <!-- search -->
+    <span>{{'CLIENT_NAME' | translate }}：<select kendo-combo-box k-ng-model="client" k-data-text-field="'client'" k-data-value-field="'id'" k-filter="'contains'" k-data-source="clientSource"></select></span>
+    <span>{{'NAME' | translate }}：<input kendo-masked-text-box type="text" ng-model="client" style="width:120px;"/></span>
+    <span>{{'ITEMGROUP' | translate }}：<select kendo-combo-box k-ng-model="itemgroup" k-data-text-field="'itemGroupId'" k-data-value-field="'id'" k-filter="'contains'" k-data-source="clientSource"></select></span>
+    <span>{{'NAME' | translate }}：<input kendo-masked-text-box type="text" ng-model="name" style="width:120px;"/></span>
+    <!--<span>{{'STORAGE_TYPE' | translate }}：<select kendo-combo-box k-ng-model="storageType" k-data-text-field="'resourceKey'" k-data-value-field="'selectionValue'"  k-filter="'contains'" k-data-source="storageTypeSource"></select>-->
+    <kendo-button class="k-primary" ng-click="searchGrid()">
+      <span class="k-font-icon k-i-search"></span>{{'SEARCH'| translate }}
+    </kendo-button>
+    <!-- grid -->
+    <div class="gridToolbar" ng-controller="masterCtl">
+      <kendo-button class="k-primary gridButton" ng-click="create()"><span class="k-font-icon k-i-plus"></span>{{'CREATE' | translate }}</kendo-button>
+      <kendo-button class="k-primary gridButton" ng-click="delete()"><span class="k-font-icon k-i-trash"></span>{{'DELETE' | translate }}</kendo-button>
+    </div>
+    <kendo-grid id="storageLocationGrid" options="semblenceGridOptions"></kendo-grid>
+  </div>
+</div>

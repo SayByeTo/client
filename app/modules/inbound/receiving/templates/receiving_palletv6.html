@@ -1,0 +1,134 @@
+<!-- toolbar -->
+<div style="height:60px;background:lightsteelblue;">
+  <div class="methodCls">{{'PALLET_RECEIPT' | translate }}{{'MODE' | translate }}</div>
+  <span ng-show="receivingDestination">
+    <kendo-button id="receive_goods_full" class="k-primary palletReceiptBut" style="height:30px;" ng-click="containerFull()">F{{'BOX_IS_FULL' | translate }}</kendo-button>
+    <kendo-button id="receive_auto_full" class="k-primary palletReceiptBut" style="height:30px;" ng-click="autoFull()">A{{'AUTO_IS_FULL' | translate }}</kendo-button>
+    <kendo-button id="receive_manual_full" class="k-primary palletReceiptBut" style="height:30px;" ng-click="manualFull()">H{{'MANUAL_IS_FULL' | translate }}</kendo-button>
+  </span>
+</div>
+<!-- receiving -->
+<div style="margin-top:20px;font-weight:600;margin-left:10px;">
+  <span class="inboundFont">{{'RECEIVING_NUMBER' | translate }}</span>
+  <input type="text" id="receiving_receive" class="k-textbox inputCls" ng-keydown="scanReceiving($event)" ng-model="adviceNo" />
+  <span class="inboundFont" style="margin-left:58px;">{{'SCAN_GOODS' | translate }}</span>
+  <input type="text" id="receiving_item_data" class="k-textbox inputCls" ng-keydown="scanItemData($event)" ng-model="itemNo" />
+</div>
+<!-- receiving show -->
+<div ng-show="receivingDestination" class="inboundFont" style="font-weight:600;margin-top:20px;width:100%;margin-left:10px;">
+  <div style="float:left;width:920px;">
+    <!-- 有效期商品 -->
+    <div ng-show="itemData.lotMandatory && startStatus==='lotMandatory'" style="float:left;width:100%;height:200px;text-align:center;">
+      <div style="margin-bottom:10px;">{{'GOODS_PERIOD' | translate }}：</div>
+      <kendo-button class="k-primary" ng-click="operator='produceDate';$('#receiving_year').focus();">1 {{'UPDATE_PRODUCE_DATE' | translate }}</kendo-button>
+      <kendo-button class="k-primary" ng-click="operator='expiredDate';$('#receiving_expiredYear').focus();">2 {{'UPDATE_EXPIRED_DATE' | translate }}</kendo-button>
+      <div ng-show="operator==='produceDate'" style="margin-top:10px;">
+        <div style="margin-top:5px;"><span style="margin-right:10px;">{{'PRODUCE' | translate }}{{'YEAR' | translate }}</span><input id="receiving_year" type="number" class="k-textbox" ng-model="year" /></div>
+        <div style="margin-top:5px;"><span style="margin-right:10px;">{{'PRODUCE' | translate }}{{'MONTH' | translate }}</span><input type="number" class="k-textbox" ng-model="month" /></div>
+        <div style="margin-top:5px;"><span style="margin-right:10px;">{{'PRODUCE' | translate }}{{'DAY' | translate }}</span><input type="number" class="k-textbox" ng-model="day" /></div>
+        <div style="margin-top:5px;">
+          <span style="margin-right:10px;">{{'EFFECTIVE_MONTH' | translate }}</span>
+          <input type="number" class="k-textbox" ng-model="months" ng-keydown="doMandatory($event, year, month, day, months)" />
+        </div>
+      </div>
+      <div ng-show="operator==='expiredDate'" style="margin-top:10px;">
+        <div style="margin-top:5px;"><span style="margin-right:10px;">{{'EXPIRED' | translate }}{{'YEAR' | translate }}</span><input id="receiving_expiredYear" type="number" class="k-textbox" ng-model="expiredYear" /></div>
+        <div style="margin-top:5px;"><span style="margin-right:10px;">{{'EXPIRED' | translate }}{{'MONTH' | translate }}</span><input type="number" class="k-textbox" ng-model="expiredMonth" /></div>
+        <div style="margin-top:5px;">
+          <span style="margin-right:10px;">{{'EXPIRED' | translate }}{{'DAY' | translate }}</span>
+          <input type="number" class="k-textbox" ng-model="expiredDay" ng-keydown="doMandatory($event, expiredYear, expiredMonth, expiredDay)" />
+        </div>
+      </div>
+    </div>
+    <!-- normal -->
+    <div ng-show="startStatus==='normal'">
+      <div>{{'INPUT_NUMBER_AS_BELOW' | translate }}：</div>
+      <div style="float:left;width:100%;margin-top:20px;">
+        <div style="float:left;width:200px;text-align:center;"><span>{{'AMOUNT_PER_BOX' | translate }}</span></div>
+        <div style="float:left;width:20px;">&nbsp;</div>
+        <div style="float:left;width:10px">&nbsp;</div>
+        <div style="float:left;width:200px;text-align:center;"><span>{{'ALL_FLOOR' | translate }}</span></div>
+        <div style="float:left;width:20px;">&nbsp;</div>
+        <div style="float:left;width:200px;text-align:center;"><span>{{'BOX_PER_FLOOR' | translate }}</span></div>
+        <div style="float:left;width:20px;">&nbsp;</div>
+        <div style="float:left;width:200px;text-align:center;"><span>{{'BOX_LESS_THAN_PER_FLOOR' | translate }}</span></div>
+      </div>
+      <div style="float:left;width:100%;margin-top:20px;">
+        <div style="float:left;"><input id="receiving_amount_per_box" type="number" class="k-textbox" style="width:200px" ng-model="amountPerBox"/></div>
+        <div style="float:left;width:20px;font-size:25px;"><span >*</span></div>
+        <div style="float:left;width:20px;font-size:20px;"><span >(</span></div>
+        <div style="float:left;"><input type="number" class="k-textbox" style="width:200px" ng-model="floor"/></div>
+        <div style="float:left;width:20px;font-size:25px;"><span >*</span></div>
+        <div style="float:left;"><input type="number" class="k-textbox" style="width:200px" ng-model="boxPerFloor"/></div>
+        <div style="float:left;width:20px;font-size:20px;"><span >+</span></div>
+        <div style="float:left;">
+          <input style="width:200px"type="number" class="k-textbox" ng-model="lessBox" ng-keydown="calcCount($event, amountPerBox, floor, boxPerFloor, lessBox)"/>
+        </div>
+        <div style="float:left;width:20px;font-size:20px;"><span >)</span></div>
+      </div>
+      <!-- calc -->
+      <div ng-show="calcStatus==='end'" style="float:left;width:100%;">
+        <div style="float:left;width:100%;margin-top:20px;">
+          <div style="float:left;width:60px;font-size:20px;margin-top:5px;">{{'TOTAL' | translate }}</div>
+          <kendo-button class="k-primary" style="border:1px solid #6aac3d;background:#6aac3d;float:left;width:840px;height:35px;font-size:16px;">{{calcAmount}}</kendo-button>
+        </div>
+        <div ng-show="operator==='init'" style="float:left;width:100%;margin-top:20px;">
+          <kendo-button class="k-primary" style="width:100px;height:30px;margin-left:20px;" ng-click="receiveSure()">{{'SURE' | translate }}</kendo-button>
+          <kendo-button class="k-primary" style="width:100px;height:30px;margin-left:30px;" ng-click="receiveUpdate()">{{'UPDATE' | translate }}</kendo-button>
+        </div>
+      </div>
+      <!-- autoFull/manualFull -->
+      <div ng-show="operator==='sure' && (goodsStatus==='autoFull' || goodsStatus==='manualFull')" style="float:left;width:100%;font-weight:600;margin-top:10px;">
+        <div ng-show="fullStatus!='full'">
+          <span>{{'RECEIVING_AREA' | translate }}</span>
+          <input type="text" style="width:250px;margin-left:10px;" class="k-textbox" ng-model="receivingDestination.name" readonly />
+          <span style="margin-left:36px;">{{'SCAN_CARTS' | translate }}</span>
+          <input id="receive_scan_carts" type="text" style="width:250px;margin-left:10px;" class="k-textbox" ng-model="containerName" ng-keydown="checkContainer($event, containerName)" />
+        </div>
+        <!-- autoFull receive success -->
+        <div ng-show="goodsStatus==='autoFull' && receiveStatus==='end'" style="margin-top:10px;">
+          <kendo-button class="k-primary" style="border:1px solid #6aac3d;background:#6aac3d;float:left;width:900px;height:40px;font-size:18px;" >
+            已经成功收货{{calcAmount}}件商品，请将车牌{{containerName}}放置到托盘上
+          </kendo-button>
+          <div style="float:left;margin-top:10px;margin-bottom:10px;">
+            <span>{{'RECEIVING_AREA' | translate }}</span>
+            <input type="text" style="width:250px;margin-left:10px;" class="k-textbox" ng-model="receivingDestination.name" readonly />
+            <span style="margin-left:24px;">{{'SCAN_NEW_LICENSE_PLATE' | translate }}</span>
+            <input id="receive_newContainer" type="text" style="width:250px;margin-left:10px;" class="k-textbox" ng-model="newContainer" ng-keydown="scanNewContainer($event, newContainer)" />
+          </div>
+        </div>
+        <!-- autoFull scan newContainer success -->
+        <kendo-button ng-show="goodsStatus==='autoFull' && containerStatus==='end'" class="k-primary" style="border:1px solid #6aac3d;background:#6aac3d;float:left;width:900px;height:40px;font-size:18px;">
+          {{'SUCCESS_BINDING_NEW_LICENSE_PLATE' | translate }}，{{'CONTINUE_SCAN_GOODS' | translate }}
+        </kendo-button>
+        <!-- goods is full -->
+        <div style="float:left;margin-top:10px;width:100%;height:150px;">
+          <div ng-show="goodsStatus==='manualFull' && fullStatus==='full'">
+            <span>{{'SCAN_FULL_LICENSE_PLATE' | translate }}</span>
+            <input id="receive_old_container" type="text" style="width:250px;margin-left:10px;" class="k-textbox" ng-model="receive_old" ng-keydown="scanOldContainer($event, receive_old)" />
+            <span style="margin-left:20px;">{{'SCAN_NEW_LICENSE_PLATE' | translate }}</span>
+            <input id="receive_new_container" type="text" style="width:250px;margin-left:10px;" class="k-textbox" ng-model="receive_new" ng-keydown="scanNewContainer($event, receive_new)" />
+            <kendo-button ng-show="containerStatus==='end'" class="k-primary" style="margin-top:10px;border:1px solid #6aac3d;background:#6aac3d;float:left;width:900px;height:40px;font-size:18px;">
+              {{'PUT_LICENSE_PLATE' | translate }}{{receive_old}}{{'TO_TRAY' | translate }}，{{'SUCCESS_BIND_NEW_CARTS' | translate }}，{{'CONTINUE_SCAN_GOODS' | translate }}
+            </kendo-button>
+          </div>
+        </div>
+        <!-- manualFull receive success -->
+        <div ng-show="goodsStatus==='manualFull' && receiveStatus==='end'" class="grid" style="margin-top:10px;float:left;width:900px;font-size:14px;">
+          <div style="font-size:18px;">车牌内收货记录</div>
+          <kendo-grid id="receivingGRID" options="receivingGridOptions"></kendo-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="float:left;width:400px;margin-right:20px;">
+    <div style="border:1px solid blue;">
+      <div style="height:240px;text-align:center;"><img style="height:240px"src="image/20161022134004.png" /></div>
+      <div style="border-top:1px solid blue;font-size:18px;">
+        {{'GOODS_NAME' | translate }}：{{ itemData.name }}<br>
+        {{'SIZE' | translate}}: {{ itemData.width}}*{{itemData.height}}*{{itemData.depth}}<br>
+        {{'WEIGHT' | translate}}：{{ itemData.weight }}
+      </div>
+    </div>
+  </div>
+</div>

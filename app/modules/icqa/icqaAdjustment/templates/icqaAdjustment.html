@@ -1,0 +1,14 @@
+<div style="line-height:40px;background:#3f70ca;font-size:20px;font-weight:600;color:white;">对应调整</div>
+<div style="margin-left:10px;padding-top:10px;">
+    <span style="font-size:18px;">开始时间</span>&nbsp;&nbsp;<input  kendo-date-picker k-format="'yyyy-MM-dd'" ng-model="stateDate" >
+    <span style="font-size:18px;">结束时间</span>&nbsp;&nbsp;<input  kendo-date-picker k-format="'yyyy-MM-dd'" ng-model="endDate">
+    <kendo-button class="k-primary"  style="font-size:18px;">搜索</kendo-button>
+    <kendo-button class="k-primary"  style="font-size:18px;">搜索未备注项</kendo-button>
+</div>
+<div style="text-align:center;margin-top:5px;">
+    <input type="text" class="k-textbox" style="width:300px;" ng-model="seekContent" >
+    <kendo-button class="k-primary" style="font-size:18px;" ng-click="icqaAdjustmentSearch()">{{'SEARCH'| translate }}</kendo-button>
+</div>
+<div style="margin-top:5px;margin-left:10px;margin-right:10px;">
+    <kendo-grid class="inboundGrid" id="icqaAdjustmentGrid" options="icqaAdjustmentGridOption" k-selectable="'row'" ></kendo-grid>
+</div>

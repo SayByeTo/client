@@ -1,0 +1,237 @@
+<!-- toolbar -->
+<div style="height:60px;background:lightsteelblue;">
+  <div class="methodCls">{{'SINGLE_RECEIPT' | translate }}{{'MODE' | translate }}</div>
+  <kendo-button class="k-primary blueReceiptBut" ng-click="readReceivingData()" ng-controller="inboundCtl">S{{'READ_DATA' | translate }}</kendo-button>
+  <kendo-button class="k-primary singleReceiptBut" ng-click="goodsFull()">F{{'BOX_IS_FULL' | translate }}</kendo-button>
+  <kendo-button class="k-primary singleReceiptBut" ng-click="goodsDamage()">D{{'GOODS_DAMAGED' | translate }}</kendo-button>
+</div>
+<!-- receiving -->
+<div style="margin-top:20px;font-weight:600;margin-left:10px;">
+  <span class="inboundFont">{{'RECEIVING_NUMBER' | translate }}</span>
+  <input type="text" id="receiving_receive" class="k-textbox inputCls" ng-keydown="scanReceiving($event)" ng-model="adviceNo" />
+  <span class="inboundFont" style="margin-left:58px;">{{'SCAN_GOODS' | translate }}</span>
+  <input type="text" id="receiving_item_data" class="k-textbox inputCls" ng-keydown="scanItemData($event)" ng-model="itemNo" />
+</div>
+<!-- receiving show -->
+<div ng-show="receivingDestination" style="font-weight:600;text-align:center;" class="inboundFont">
+  <div style="float:left;margin-top:10px;text-align:center;height:200px;margin-left:{{contentWidth}}px;">
+    <!-- position 1 -->
+    <div style="float:left;width:400px;height:100%;">
+      <div ng-show="positionNo===1 && goodsStatus==='normal'" style="background:#fff2cc;height:100%;">
+        <div style="padding-top:50px;padding-left:15px;">
+          <span>{{'RECEIVING_AREA' | translate }}</span>
+          <input style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="receivingDestination.name" />
+        </div>
+        <div style="padding-top:10px;padding-left:15px;">
+          <span>{{'PAID_NUMBER' | translate }}</span>
+          <input id="receiving_paid_number_1" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="number" ng-keydown="checkNumber($event, number)" />
+        </div>
+        <div style="padding-top:10px;padding-left:15px;padding-bottom:10px;">
+          <span>{{'SCAN_CARTS' | translate }}</span>
+          <input id="receiving_scan_carts_1" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="containerName" ng-keydown="checkContainer($event, containerName)" />
+        </div>
+      </div>
+    </div>
+    <!-- sku -->
+    <div style="float:left;width:400px;height:100%;margin-left:10px;margin-right:10px;">
+      <div style="border:1px solid #5b9bd5;height:100%;width:400px;float:left;">
+        <div style="float:left;width:260px"><img style="width:200px;height:100%;" src="image/20161022134004.png" /></div>
+        <div style="border-left:1px solid #5b9bd5;float:left;width:5px;height:100%;">&nbsp;</div>
+        <div style="height:100%;width:130px;font-size:14px;float:left;text-align:left;margin-top:60px;">
+          {{'NAME' | translate}}：{{ itemData.name }}<br>
+          {{'SIZE' | translate}}: {{ itemData.width}}*{{itemData.height}}*{{itemData.depth}}<br>
+          {{'WEIGHT' | translate}}：{{ itemData.weight }}
+        </div>
+      </div>
+    </div>
+    <!-- position 5 -->
+    <div style="float:left;width:400px;height:100%;">
+      <div ng-show="positionNo===5 && goodsStatus==='normal'" style="background:#5b9bd5;height:100%;">
+        <div style="padding-top:50px;padding-left:15px;">
+          <span>{{'RECEIVING_AREA' | translate }}</span>
+          <input style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="receivingDestination.name"/>
+        </div>
+        <div style="padding-top:10px;padding-left:15px;">
+          <span>{{'PAID_NUMBER' | translate }}</span>
+          <input id="receiving_paid_number_5" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="number" ng-keydown="checkNumber($event, number)" />
+        </div>
+        <div style="padding-top:10px;padding-bottom:10px;padding-left:15px;">
+          <span>{{'SCAN_CARTS' | translate }}</span>
+          <input id="receiving_scan_carts_5" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="containerName" ng-keydown="checkContainer($event, containerName)" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="float:left;width:100%;margin-top:10px;text-align:center;height:200px;margin-left:{{contentWidth}}px;">
+    <!-- position 2 -->
+    <div style="float:left;width:400px;height:100%;">
+      <div ng-show="positionNo===2 && goodsStatus==='normal'" style="background:#ededed;height:100%;">
+        <div style="padding-top:50px;padding-left:15px;">
+          <span>{{'RECEIVING_AREA' | translate }}</span>
+          <input style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="receivingDestination.name"/>
+        </div>
+        <div style="padding-top:10px;padding-left:15px;">
+          <span>{{'PAID_NUMBER' | translate }}</span>
+          <input id="receiving_paid_number_2" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="number" ng-keydown="checkNumber($event, number)" />
+        </div>
+        <div style="padding-top:10px;padding-bottom:10px;padding-left:15px;">
+          <span>{{'SCAN_CARTS' | translate }}</span>
+          <input id="receiving_scan_carts_2" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="containerName" ng-keydown="checkContainer($event, containerName)" />
+        </div>
+      </div>
+    </div>
+    <!-- position 3 -->
+    <div style="float:left;width:400px;height:100%;margin-left:10px;margin-right:10px;">
+      <div ng-show="positionNo===3 && goodsStatus==='normal'" style="background:#e2f0d9;height:100%;">
+        <div style="padding-top:50px;padding-left:15px;">
+          <span>{{'RECEIVING_AREA' | translate }}</span>
+          <input style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="receivingDestination.name"/>
+        </div>
+        <div style="padding-top:10px;padding-left:15px;">
+          <span>{{'PAID_NUMBER' | translate }}</span>
+          <input id="receiving_paid_number_3" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="number" ng-keydown="checkNumber($event, number)" />
+        </div>
+        <div style="padding-top:10px;padding-bottom:10px;padding-left:15px;">
+          <span>{{'SCAN_CARTS' | translate }}</span>
+          <input id="receiving_scan_carts_3" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="containerName" ng-keydown="checkContainer($event, containerName)" />
+        </div>
+      </div>
+    </div>
+    <!-- position 4 -->
+    <div style="float:left;width:400px;height:100%;">
+      <div ng-show="positionNo===4 && goodsStatus==='normal'" style="background:#ccecff;height:100%;">
+        <div style="padding-top:50px;padding-left:15px;">
+          <span>{{'RECEIVING_AREA' | translate }}</span>
+          <input style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="receivingDestination.name"/>
+        </div>
+        <div style="padding-top:10px;padding-left:15px;">
+          <span>{{'PAID_NUMBER' | translate }}</span>
+          <input id="receiving_paid_number_4" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="number" ng-keydown="checkNumber($event, number)" />
+        </div>
+        <div style="padding-top:10px;padding-bottom:10px;padding-left:15px;">
+          <span>{{'SCAN_CARTS' | translate }}</span>
+          <input id="receiving_scan_carts_4" style="width:70%;margin-left:15px;" type="text" class="k-textbox" ng-model="containerName" ng-keydown="checkContainer($event, containerName)" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 有效期商品 -->
+  <div ng-show="itemData.lotMandatory && goodsStatus==='lotMandatory'" style="float:left;width:100%;height:200px;text-align:center;">
+    <div style="margin-bottom:10px;">{{'GOODS_PERIOD' | translate }}：</div>
+    <kendo-button class="k-primary" ng-click="operator='produceDate';$('#receiving_year').focus();">1 {{'UPDATE_PRODUCE_DATE' | translate }}</kendo-button>
+    <kendo-button class="k-primary" ng-click="operator='expiredDate';$('#receiving_expiredYear').focus();">2 {{'UPDATE_EXPIRED_DATE' | translate }}</kendo-button>
+    <div ng-show="operator==='produceDate'" style="margin-top:10px;">
+      <div style="margin-top:5px;"><span style="margin-right:10px;">{{'PRODUCE' | translate }}{{'YEAR' | translate }}</span><input id="receiving_year" type="number" class="k-textbox" ng-model="year" /></div>
+      <div style="margin-top:5px;"><span style="margin-right:10px;">{{'PRODUCE' | translate }}{{'MONTH' | translate }}</span><input type="number" class="k-textbox" ng-model="month" /></div>
+      <div style="margin-top:5px;"><span style="margin-right:10px;">{{'PRODUCE' | translate }}{{'DAY' | translate }}</span><input type="number" class="k-textbox" ng-model="day" /></div>
+      <div style="margin-top:5px;">
+        <span style="margin-right:10px;">{{'EFFECTIVE_MONTH' | translate }}</span>
+        <input type="number" class="k-textbox" ng-model="months" ng-keydown="doMandatory($event, year, month, day, months)" />
+      </div>
+    </div>
+    <div ng-show="operator==='expiredDate'" style="margin-top:10px;">
+      <div style="margin-top:5px;"><span style="margin-right:10px;">{{'EXPIRED' | translate }}{{'YEAR' | translate }}</span><input id="receiving_expiredYear" type="number" class="k-textbox" ng-model="expiredYear" /></div>
+      <div style="margin-top:5px;"><span style="margin-right:10px;">{{'EXPIRED' | translate }}{{'MONTH' | translate }}</span><input type="number" class="k-textbox" ng-model="expiredMonth" /></div>
+      <div style="margin-top:5px;">
+        <span style="margin-right:10px;">{{'EXPIRED' | translate }}{{'DAY' | translate }}</span>
+        <input type="number" class="k-textbox" ng-model="expiredDay" ng-keydown="doMandatory($event, expiredYear, expiredMonth, expiredDay)" />
+      </div>
+    </div>
+  </div>
+  <!-- 测量 -->
+  <div ng-show="itemData.measured && goodsStatus==='measure'" style="float:left;width:100%;">
+    <span>{{'TAKE_OUT' | translate }}1{{'PIECE' | translate}}{{'GOODS_MEASURE_BOX' | translate }}：</span>
+    <div style="margin-top:10px;">
+      <span style="margin-right:10px;">{{'SCAN_MEASURE_PLATE' | translate }}</span>
+      <input id="receiving_measure" type="text" class="k-textbox" ng-model='measureContainer' ng-keydown="scanMeasureContainer($event, measureContainer)" />
+    </div>
+    <div ng-show="measuredStatus==='end'" style="text-align:center;margin-top:10px;height:60px;padding-top:10px;margin-left:{{contentWidth}}px;">
+      <div style="float:left;width:400px;height:100%;"></div>
+      <div style="float:left;width:400px;height:100%;background:#f1bd00;color:white;margin-left:10px;">
+        {{'SUCCESS_PLACED' | translate }}1{{'PIECE' | translate}}{{'GOODS_MEASURE_BOX' | translate }}<br>{{'CONTINUE_SCAN_GOODS' | translate }}
+      </div>
+      <div style="float:left;width:400px;height:100%;"></div>
+    </div>
+  </div>
+  <!-- 商品残损 -->
+  <div ng-show="goodsStatus==='damage'" style="float:left;width:100%;">
+    <span>{{'PUT_GOODS_IN_DAMAGED_CARTS' | translate }}：</span>
+    <div style="margin-top:10px">
+      <span style="font-weight:600;margin-right:10px;">{{'GOODS_NUMBER' | translate }}</span>
+      <input id="receiving_goodsNumber" type="number" class="k-textbox" ng-model="goodsNumber" />
+    </div>
+    <div style="margin-top:10px">
+      <span style="font-weight:600;margin-right:10px;">{{'DAMAGED_LICENSE_PLATE' | translate }}</span>
+      <input id="receiving_damageContainer" type="text" class="k-textbox" ng-model="damageContainer" ng-keydown="scanDamageContainer($event, goodsNumber, damageContainer)" />
+    </div>
+    <div ng-show="damageStatus==='end'" style="text-align:center;margin-top:10px;height:40px;padding-top:10px;margin-left:{{contentWidth}}px;">
+      <div style="float:left;width:400px;height:100%;"></div>
+      <div style="float:left;width:400px;height:100%;background:red;color:white;margin-left:10px;">
+        {{'GOODS_DAMAGED_REPORTED' | translate }}{{goodsNumber}}{{'PIECE' | translate}}{{'GOODS' | translate }}{{'CONTINUE_SCAN_GOODS' | translate }}
+      </div>
+      <div style="float:left;width:400px;height:100%;"></div>
+    </div>
+  </div>
+  <!-- 货框已满 -->
+  <div ng-show="goodsStatus==='full'" style="float:left;width:100%;">
+    <span>{{'SCAN_FULL_BINDING_NEW_FRAME' | translate }}：</span>
+    <div style="margin-top:10px">
+      <span style="font-weight:600;margin-right:10px;">{{'FULL_LICENSE_PLATE' | translate }}</span>
+      <input id="receiving_oldContainer" type="text" class="k-textbox" ng-model="oldContainer" ng-keydown="scanOldContainer($event, oldContainer)" />
+    </div>
+    <div style="margin-top:10px">
+      <span style="font-weight:600;margin-right:10px;">{{'NEW_LICENSE_PLATE' | translate }}</span>
+      <input id="receiving_newContainer" type="text" class="k-textbox" ng-model="newContainer" ng-keydown="scanNewContainer($event, newContainer)" />
+    </div>
+    <div ng-show="fullStatus==='end'" style="text-align:center;margin-top:10px;height:40px;padding-top:10px;margin-left:{{contentWidth}}px;">
+      <div style="float:left;width:400px;height:100%;"></div>
+      <div style="float:left;width:400px;height:100%;background:#6AAd3d;color:white;margin-left:10px;">
+        {{'SUCCESS_BINDING_NEW_CAR' | translate }}，{{'CONTINUE_SCAN_GOODS' | translate }}
+      </div>
+      <div style="float:left;width:400px;height:100%;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 确认商品多货 -->
+<div kendo-window="moreGoodsWindow" k-visible="false" k-modal="true" class="inboundFont"></div>
+<!-- 扫描商品序列号 -->
+<div kendo-window="scanSerialNoWindow" id="scanSerialNoWindow" k-title="'{{'SCAN_GOODS_NUMBER' | translate }}'" k-visible="false" k-modal="true" class="inboundFont">
+  <div style="margin-top:10px;">
+    <span>{{'GOODS' | translate }}:</span><span style="margin-left:10px;">{{itemData.name}}</span>
+  </div>
+  <div style="float:left;width:70%;margin-top:20px;">
+    <span>{{'SERIAL_NO' | translate}}:</span>
+    <input id="receiving_serial_no" type="text" class="k-textbox" style="width:180px;margin-left:10px;" ng-model="serialNo" ng-keydown="scanSerialNo($event, serialNo)"/>
+  </div>
+  <div style="float:left;width:30%;"><img style="float:right;width:160px;height:170px;" src="image/20161022134004.png" /></div><br>
+</div>
+
+<!--<div kendo-window="window2" id="myWindow2"  k-title="'{{'PUT_GOODS_ORIGINAL_BOX' | translate }}'" k-visible="false" k-modal="true" class="inboundFont">-->
+  <!--<div style="margin-top:10px;"><span>{{'GOODS' | translate }}:</span>&nbsp;<span>Walch威露士炫白多效馨香有氧洗洗衣液3kg 有氧去污衣物护理</span></div>-->
+  <!--<div style="float:left;width:70%">-->
+    <!--<div style="margin-top:10px;"><span>请将商品放入原包装箱，已触发暗灯，请将箱内其余商品收货完毕后，将原包装箱送至问题处理处</span></div>-->
+    <!--<div style="margin-top:20px;"><span>{{'CONTINUE_SCAN_GOODS' | translate }}</span></div>-->
+  <!--</div>-->
+  <!--<div style="float:left;width:30%;"><img style="float:right;width:160px;height:170px;" src="image/20161022134004.png" /></div><br>-->
+  <!--<div>-->
+    <!--<div style="text-align:center;width:100%">-->
+      <!--<kendo-button class="k-primary ReceiptBut" ng-click="window2.close()">2 {{'CANCEL' | translate }}</kendo-button>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div kendo-window="window3" id="myWindow3" k-title="'{{'PLEASE_CONFIRM_FORCE_RECEIVING' | translate }}'" k-visible="false" k-modal="true" class="inboundFont">-->
+  <!--<div style="margin-top:10px;"><span>{{'GOODS' | translate }}:</span>&nbsp;<span>Walch威露士炫白多效馨香有氧洗洗衣液3kg 有氧去污衣物护理</span></div>-->
+  <!--<div style="float:left;width:70%">-->
+    <!--<div style="margin-top:10px;"><span>{{'DN_TOTAL' | translate }}</span>&nbsp;<span>200{{'JIAN' | translate }}</span></div>-->
+    <!--<div style="margin-top:10px;"><span>{{'RECEIVER_NUMBER' | translate }}</span>&nbsp;<span>190{{'JIAN' | translate }}</span></div>-->
+    <!--<div style="margin-top:10px;"><span>{{'ENTERED_NUMBER' | translate }}</span>&nbsp;<span>80{{'JIAN' | translate }}</span></div>-->
+    <!--<div style="margin-top:10px;"><span>{{'OVERFLOW_DN_NUMBER' | translate }}</span>&nbsp;<span>5{{'JIAN' | translate }}，{{'AGAIN_CONFIRM_NUMBER' | translate }},{{'CONFIRM_FORCE_RECEIVING' | translate }}</span></div>-->
+  <!--</div>-->
+  <!--<div style="float:left;width:30%;"><img style="float:right;width:160px;height:170px;" src="image/20161022134004.png" /></div><br>-->
+  <!--<div style="text-align:center;width:100%">-->
+    <!--<kendo-button class="k-primary ReceiptBut">1 {{'SURE' | translate }}</kendo-button>&nbsp;&nbsp;-->
+    <!--<kendo-button class="k-primary ReceiptBut" ng-click="window3.close()">2 {{'CANCEL' | translate }}</kendo-button>-->
+  <!--</div>-->
+<!--</div>-->

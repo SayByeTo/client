@@ -1,0 +1,54 @@
+<div style="height:100%;overflow: hidden;">
+  <div style="height:100%;overflow: hidden;">
+    <div ng-show="scanhead==='0'" class="inbound-scanstation" style="background-color: white;">
+      <div class="inbound-scan-topbar"><span style="font-weight:600;margin-top:2px;text-align: center;color: white" class="inboundFont">{{'SCANRECEIVESTATION'|translate}}</span></div>
+      <input type="text" id="receiving_station" ng-keydown="scanStation($event)" style="width: 50%;font-size:16px;margin-top: 10px;border-style: none;" ng-model="station"/><br>
+      <img src="../../../../image/20161123145423.png" style="margin:auto;position: absolute;top:0;bottom:0;right:0;left:0;width:50%;height:35%;float: left;" /><br>
+      <span id="warnStation" ng-show="scanstatus==='1'" class="inboundFont" style="color:red;">{{'STATIONNUMISWRONG'|translate}}</span>
+    </div>
+    <!-- normal -->
+    <div ng-show="status==='normal'">
+      <div class="workingStation">
+        <span ng-show="maxAmount===0">{{'RECEIVING_WORKSTATION_NOT_EXIST' | translate }}{{'RECEIVE_DESTINATION' | translate }}，</span>
+        <span ng-show="maxAmount>0">{{'RECEIVING_WORKSTATION_HAVE' | translate }}{{maxAmount}}{{'PERSONAL' | translate}}{{'RECEIVE_DESTINATION' | translate }}，</span>
+        <span>{{'SCAN_BINDING' | translate }}</span>
+      </div>
+      <div style="margin-top:20px;font-weight:600;">
+        <div style="margin-left:20px;">
+          <span class="inboundFont">{{'RECEIVE_DESTINATION' | translate }}</span>
+          <input id="receiving_destination" type="text" class="k-textbox inputCls" ng-model="destination" ng-keydown="scanDestination($event)"/>
+          <span id="warnDestination" class="inboundFont" style="color:red;margin-left:24px;"></span>
+        </div>
+        <div style="margin-top:10px;">
+          <span class="inboundFont">{{'STORAGELOCATION_BINDING' | translate }}</span>
+          <input id="receiving_container" type="text" class="k-textbox inputCls" ng-model="container" ng-keydown="scanContainer($event)"/>
+          <span id="warnContainer" class="inboundFont" style="color:red;margin-left:24px;"></span>
+        </div>
+      </div>
+      <div class="grid" style="width:75%;margin-top:20px;">
+        <kendo-grid id="receivingGRID" options="receivingGridOptions"></kendo-grid>
+      </div>
+    </div>
+    <!-- 绑定已达最大值 -->
+    <div ng-show="status==='max'" class="inbound-inboundmode">
+      <div class="box_shadow" style="height:15%;background:#EF7421;color:white;font-size:24px;font-weight:600;">{{ 'RECEIVING_MODE' | translate}}</div>
+      <div ng-show="receivingMode!='confirm'" style="margin-top:10px;font-weight:600;font-size:14px;">
+        {{ 'RECEIVING_STATION_HAVE_BINDING' | translate}}{{maxAmount}}{{'PERSONAL' | translate}}{{'RECEIVING_DESTINATION_AND_CONTAINER' | translate}}，{{ 'RECEIVING_MODE' | translate}}
+      </div>
+      <div ng-show="receivingMode==='confirm'" style="margin-top:10px;font-weight:600;font-size:14px;">{{ 'RECEIVING_FORCE_FULL_REBINDING' | translate}}</div>
+      <div class="grid" style="margin:25px;">
+        <kendo-grid id="receivedGRID" options="receivedGridOptions"></kendo-grid>
+      </div>
+      <div ng-show="receivingButton!='confirm'" style="font-size:14px;margin-bottom:20px;">
+        <kendo-button class="k-primary k-button" ng-click="toReceiving()" style="width:40%;">{{ 'CONUTINUE_USE_PICKPACK_NOW' | translate}}</kendo-button>
+        <kendo-button class="k-primary k-button" ng-click="receivingMode='confirm';receivingButton='confirm'" style="width:40%;">{{ 'FULL_RE_PICKPACK' | translate}}</kendo-button>
+      </div>
+      <div ng-show="receivingButton==='confirm'" style="font-size:14px;margin-bottom:20px;">
+        <kendo-button class="k-primary k-button" ng-click="deleteReceivingContainer($event)" style="width:40%;">{{ 'SURE' | translate}}</kendo-button>
+        <kendo-button class="k-primary k-button" ng-click="status='init';receivingMode='init';receivingButton='init';" style="width:40%;">{{ 'CANCEL' | translate}}</kendo-button>
+      </div>
+    </div>
+</div>
+
+</div>
+

@@ -1,0 +1,70 @@
+<div class="mushiny-container">
+  <div class="mushiny-nav">
+    <a ui-sref="main.mainMenu" href="#">{{'HOME' | translate }}</a>&nbsp;/&nbsp;<span>{{'MASTER_INBOUND' | translate }}&nbsp;/&nbsp;<a
+    ui-sref="main.replenish_strategy">{{'REPLENISH_STRATEGY' | translate }}</a>&nbsp;/&nbsp;{{'CREATE' | translate }}</span>
+  </div>
+  <div style="margin-top:10px;height:{{ mainHeight+36 }}px;overflow:auto;">
+    <form kendo-validator="validator" ng-submit="validate($event)">
+      <ul class="ulCls">
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'CLIENT' | translate}}</label></div>
+          <div class="formRight">
+            <select kendo-combo-box k-ng-model="client" k-data-text-field="'name'" k-data-value-field="'id'" k-filter="'contains'" k-data-source="$root.clientSource"></select>
+          </div>
+        </li>
+        <li>
+          <div class="formLeft"><label for="minSkuUnits" class="required" style="float:right">{{'MIN_SKU_UNITS' | translate}}</label></div>
+          <div class="formRight"><input type="number" id="minSkuUnits" name="minSkuUnits" class="k-textbox" ng-model="minSkuUnits"/></div>
+        </li>
+        <li>
+          <div class="formLeft"><label for="shipmentDay" class="required" style="float:right">{{'SHIPMENT_DAY' | translate}}</label></div>
+          <div class="formRight"><input kendo-numeric-text-box k-decimals="4" type="number" id="shipmentDay" name="shipmentDay" class="k-textbox" required validationMessage="{{'WARNING_SHIPMENT_DAY' | translate }}" ng-model="shipmentDay"/></div>
+        </li>
+        <li>
+          <div class="formLeft"><label for="unitsShipment" class="required" style="float:right">{{'UNITS_SHIPMENT' | translate}}</label></div>
+          <div class="formRight"><input kendo-numeric-text-box k-decimals="4" type="number" id="unitsShipment" name="unitsShipment" class="k-textbox" ng-model="unitsShipment"/></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'REPLENISH_TRIGGER' | translate}}</label></div>
+          <div class="formRight"><select kendo-combo-box class="k-textbox" k-data-source="rtSource" ng-model="replenishTrigger"></select></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'FUD_STRATEGY' | translate}}</label></div>
+          <div class="formRight"><select kendo-combo-box type="text" class="k-textbox" k-data-source="fsSource" required validationMessage="{{'WARNING_FUD_STRATEGY' | translate }}" ng-model="fudStrategy"></select></div>
+        </li>
+        <li>
+          <div class="formLeft"><label for="replenishPadTime" class="required" style="float:right">{{'REPLENISH_PAD_TIME' | translate}}</label></div>
+          <div class="formRight"><input kendo-numeric-text-box k-format="'# min'" id="replenishPadTime" name="replenishPadTime" class="k-textbox" ng-model="replenishPadTime"/></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'RECEIVE_PRIME' | translate}}</label></div>
+          <div class="formRight"><select kendo-combo-box type="text" class="k-textbox" k-data-source="rpSource" required validationMessage="{{'WARNING_RECEIVE_PRIME' | translate }}" ng-model="receivePrime"></select></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'RECEIVE_PRIME_STRATEGY' | translate}}</label></div>
+          <div class="formRight"><select kendo-combo-box type="text" class="k-textbox" k-data-source="rpsSource" ng-model="receivePrimeStrategy"></select></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'SKU_STOW_RULE' | translate}}</label></div>
+          <div class="formRight"><select kendo-combo-box type="text" class="k-textbox" k-data-source="ssrSource" required validationMessage="{{'WARNING_SKU_STOW_RULE' | translate }}" ng-model="skuStowRule"></select></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'SKU_MAX_TYPE' | translate}}</label></div>
+          <div class="formRight"><select kendo-combo-box type="text" class="k-textbox" k-data-source="smtSource" required validationMessage="{{'WARNING_SKU_MAX_TYPE' | translate }}" ng-model="skuMaxType"></select></div>
+        </li>
+        <li>
+          <div class="formLeft"><label for="stowingType" class="required" style="float:right">{{'STOWING_TYPE' | translate}}</label></div>
+          <div class="formRight"><input type="text" id="stowingType" name="stowingType" class="k-textbox" ng-model="stowingType"/></div>
+        </li>
+        <li>
+          <div class="formLeft"><label for="problemLocation" class="required" style="float:right">{{'PROBLEM_LOCATION' | translate}}</label></div>
+          <div class="formRight"><input type="text" id="problemLocation" name="problemLocation" class="k-textbox" ng-model="problemLocation"/></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">&nbsp;</label></div>
+          <div class="formRight"><button class="k-button k-primary" type="submit">{{'SAVE' | translate}}</button></div>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>

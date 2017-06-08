@@ -1,0 +1,46 @@
+<div class="mushiny-container">
+  <div class="mushiny-nav">
+    <a ui-sref="main.mainMenu" href="#">{{'HOME' | translate }}</a>&nbsp;/&nbsp;<span>{{'MASTER_DATA' | translate }}&nbsp;/&nbsp;<a
+    ui-sref="main.workstation">{{'WORKSTATION' | translate }}</a>&nbsp;/&nbsp;{{'CREATE' | translate }}</span>
+  </div>
+  <div style="margin-top:10px;height:{{ mainHeight+36 }}px;overflow:auto;">
+    <form kendo-validator="validator">
+      <ul class="ulCls">
+        <li>
+          <div class="formLeft"><label for="name" class="required" style="float:right">{{'NAME' | translate}}</label></div>
+          <div class="formRight"><input type="text" id="name" name="name" class="k-textbox" required validationMessage="{{'WARNING_NAME' | translate }}" ng-model="name"/></div>
+        </li>
+        <li>
+          <div class="formLeft"><label class="required" style="float:right">{{'WORKSTATION_TYPE' | translate }}</label></div>
+          <div class="formRight">
+            <select kendo-combo-box k-ng-model="workstationType" k-data-text-field="'name'" k-data-value-field="'id'" k-filter="'contains'" k-data-source="workstationTypeSource"></select>
+          </div>
+        </li>
+        <li style="margin-top:10px;">
+          <div class="formLeft"><label class="required" style="float:right">{{'FIXED_SCANNER' | translate}}</label></div>
+          <div class="formRight">
+            <input type="radio" name="fixedScanner" id="fixedScannerTrue" class="k-radio" value="true" ng-model="fixedScanner">
+            <label class="k-radio-label" for="fixedScannerTrue">True</label>
+            <input type="radio" name="fixedScanner" id="fixedScannerFalse" class="k-radio" value="false" ng-model="fixedScanner">
+            <label class="k-radio-label" for="fixedScannerFalse">False</label>
+          </div>
+        </li>
+        <li style="margin-bottom:10px;">
+          <div class="formLeft"><label class="required" style="float:right">{{'PICK_PACK_WALL' | translate }}</label></div>
+          <div class="formRight">
+            <select kendo-combo-box k-ng-model="pickPackWall" k-data-text-field="'name'" k-data-value-field="'id'" k-filter="'contains'" k-data-source="pickPackWallSource"></select>
+          </div>
+        </li>
+      </ul>
+    </form>
+    <hr>
+    <div class="gridToolbar">
+      <kendo-button class="k-primary gridButton" ng-click="createDetail('workstationPositionGrid')"><span class="k-font-icon k-i-plus"></span>{{'CREATE' | translate }}</kendo-button>
+      <kendo-button class="k-primary gridButton" ng-click="deleteDetail('workstationPositionGrid')"><span class="k-font-icon k-i-trash"></span>{{'DELETE' | translate }}</kendo-button>
+    </div>
+    <kendo-grid id="workstationPositionGrid" options="workstationPositionGridOptions"></kendo-grid>
+    <div class="mushiny_btnBox" style="margin-top:10px;text-align:center;margin-left:-23%;">
+      <kendo-button class="k-button k-primary mushiny_btn" style="width:220px;" ng-click="validate($event)" translate="SAVE"></kendo-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div style="line-height:40px;background:#3f70ca;font-size:20px;font-weight:600;padding-left:10px;color:white;">盘点任务创建</div>
+<div style="margin-top:10px;margin-left:10px;">
+  <div style="float:left;width:250px;"><span style="font-size:18px;">任务名称</span>&nbsp;&nbsp;<input type="text" class="k-textbox" ng-model="icqaName">&nbsp;&nbsp;</div>
+  <div style="float:left;width:250px;"><span style="font-size:18px;">盘点数量</span>&nbsp;&nbsp;<input type="number" class="k-textbox" ng-model="icqaAmount">&nbsp;&nbsp; </div>
+  <div style="float:left;"><span style="font-size:18px;float:left;">指定区域</span>&nbsp;&nbsp;
+    <select style="width:300px;float:left;margin-left:10px;" kendo-multi-select id="zoneId" k-ng-model="zone" k-data-text-field="'name'" k-data-value-field="'id'" k-filter="'contains'"></select></div>
+</div>
+
+<div style="margin-top:5px;margin-left:10px;float:left;">
+  <span style="font-size:18px;">请选择盘点要素</span>&nbsp;&nbsp;
+  <select style="width:300px;" id="stocktakingRulesId" k-change="'addStocktakingOrder(stocktakingRule)'" kendo-combo-box k-ng-model="stocktakingRule" k-data-text-field="'name'" k-data-value-field="'id'"
+          k-filter="'contains'" k-data-source="stocktakingRuleSource"></select>
+  </span>
+  &nbsp;&nbsp;
+  <kendo-button class="k-primary" style="float:right;font-size:18px;margin-right:20px;" ng-click="saveIcqaCreate()">{{'SAVE'| translate }}</kendo-button>
+  <kendo-button class="k-primary" style="float:right;font-size:18px;margin-right:20px;" ng-click="deleteStocktaking()">{{'DELETE'| translate }}</kendo-button>
+</div>
+<div style="margin-top:5px;margin-left:10px;margin-right:10px;float:left;">
+  <kendo-grid class="inboundGrid" id="stocktakingGridId" options="stocktakingGridOption"></kendo-grid>
+</div>
+
+<!--盘点数量超出-->
+<div kendo-window="stocktakingWindow" id="stocktakingId" k-title="'盘点数量超出'" k-visible="false" k-modal="true">
+  <div style="text-align:center;width:100%;font-size:20px;margin-top:20px;">盘点数量大于总数 ，请重新输入百分比</div>
+  <div style="text-align:center;width:100%;margin-top:20px;">
+    <kendo-button class="k-primary ReceiptBut" ng-click="stocktakingWindow.close()">{{'CANCEL' | translate }}</kendo-button>
+  </div>
+</div>

@@ -1,0 +1,1186 @@
+{
+  "customerShipmentDTO" : {
+    "id" : "6a003a80-4c17-4418-9259-86e4aa0c2146",
+    "createdDate" : "2017-03-27T13:04:44+08:00",
+    "createdBy" : {
+      "entityLock" : 0,
+      "username" : "mengmengsun"
+    },
+    "modifiedDate" : "2017-04-01T13:50:38+08:00",
+    "modifiedBy" : {
+      "entityLock" : 0,
+      "username" : "mengmengsun"
+    },
+    "entityLock" : 0,
+    "warehouse" : {
+      "id" : "DEFAULT",
+      "createdDate" : "2016-10-18T15:36:00+08:00",
+      "createdBy" : {
+        "entityLock" : 0,
+        "username" : "ADMIN"
+      },
+      "modifiedDate" : "2017-03-10T08:06:28+08:00",
+      "modifiedBy" : {
+        "entityLock" : 0,
+        "username" : "admin"
+      },
+      "entityLock" : 0,
+      "name" : "DEFAULT",
+      "warehouseNo" : "DEFAULT"
+    },
+    "client" : {
+      "id" : "SYSTEM",
+      "createdDate" : "2016-10-18T15:36:00+08:00",
+      "createdBy" : {
+        "entityLock" : 0,
+        "username" : "ADMIN"
+      },
+      "modifiedDate" : "2016-10-18T15:36:00+08:00",
+      "modifiedBy" : {
+        "entityLock" : 0,
+        "username" : "ADMIN"
+      },
+      "entityLock" : 0,
+      "clientNo" : "SYSTEM",
+      "name" : "SYSTEM"
+    },
+    "customerName" : "B4",
+    "customerNo" : "B4",
+    "deliveryDate" : "2017-03-28T23:30:00+08:00",
+    "sortCode" : "SZ001",
+    "shipmentNo" : "920499958277164",
+    "priority" : 1,
+    "state" : 640,
+    "customerOrder" : {
+      "id" : "0fee1fd1-2468-4dc0-b4bd-7233ee4514fe",
+      "createdDate" : "2017-03-27T13:04:44+08:00",
+      "createdBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "modifiedDate" : "2017-03-27T13:04:44+08:00",
+      "modifiedBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "entityLock" : 0,
+      "warehouse" : {
+        "id" : "DEFAULT",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2017-03-10T08:06:28+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "admin"
+        },
+        "entityLock" : 0,
+        "name" : "DEFAULT",
+        "warehouseNo" : "DEFAULT"
+      },
+      "client" : {
+        "id" : "SYSTEM",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2016-10-18T15:36:00+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "entityLock" : 0,
+        "clientNo" : "SYSTEM",
+        "name" : "SYSTEM"
+      },
+      "customerName" : "B4",
+      "customerNo" : "B4",
+      "deliveryDate" : "2017-03-28T23:30:00+08:00",
+      "sortCode" : "SZ001",
+      "orderNo" : "B4",
+      "priority" : 1,
+      "state" : 0,
+      "orderStrategy" : {
+        "id" : "6fa12923-85a1-4bb4-b30d-8474f24af711",
+        "createdDate" : "2017-02-15T03:17:42+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "modifiedDate" : "2017-02-15T03:17:42+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "entityLock" : 0,
+        "warehouse" : {
+          "id" : "DEFAULT",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2017-03-10T08:06:28+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "admin"
+          },
+          "entityLock" : 0,
+          "name" : "DEFAULT",
+          "warehouseNo" : "DEFAULT"
+        },
+        "client" : {
+          "id" : "SYSTEM",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2016-10-18T15:36:00+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "entityLock" : 0,
+          "clientNo" : "SYSTEM",
+          "name" : "SYSTEM"
+        },
+        "name" : "订货策略1",
+        "createShippingOrder" : true,
+        "createFollowupPicks" : true,
+        "manualCreationIndex" : true,
+        "preferMatchingStock" : true,
+        "preferUnopened" : true,
+        "useLockedLot" : true,
+        "useLockedStock" : true
+      },
+      "positions" : [ ]
+    },
+    "boxType" : {
+      "id" : "825c7005-12ae-4bcf-b63c-63cf25228a5e",
+      "createdDate" : "2017-02-15T03:12:07+08:00",
+      "createdBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "modifiedDate" : "2017-02-15T03:12:07+08:00",
+      "modifiedBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "entityLock" : 0,
+      "warehouse" : {
+        "id" : "DEFAULT",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2017-03-10T08:06:28+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "admin"
+        },
+        "entityLock" : 0,
+        "name" : "DEFAULT",
+        "warehouseNo" : "DEFAULT"
+      },
+      "client" : {
+        "id" : "SYSTEM",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2016-10-18T15:36:00+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "entityLock" : 0,
+        "clientNo" : "SYSTEM",
+        "name" : "SYSTEM"
+      },
+      "group" : "BAG",
+      "name" : "Bag1",
+      "height" : 250.00,
+      "width" : 330.00,
+      "depth" : 50.00,
+      "volume" : 4125000.000000,
+      "weight" : 0.100
+    },
+    "orderStrategy" : {
+      "id" : "6fa12923-85a1-4bb4-b30d-8474f24af711",
+      "createdDate" : "2017-02-15T03:17:42+08:00",
+      "createdBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "modifiedDate" : "2017-02-15T03:17:42+08:00",
+      "modifiedBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "entityLock" : 0,
+      "warehouse" : {
+        "id" : "DEFAULT",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2017-03-10T08:06:28+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "admin"
+        },
+        "entityLock" : 0,
+        "name" : "DEFAULT",
+        "warehouseNo" : "DEFAULT"
+      },
+      "client" : {
+        "id" : "SYSTEM",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2016-10-18T15:36:00+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "entityLock" : 0,
+        "clientNo" : "SYSTEM",
+        "name" : "SYSTEM"
+      },
+      "name" : "订货策略1",
+      "createShippingOrder" : true,
+      "createFollowupPicks" : true,
+      "manualCreationIndex" : true,
+      "preferMatchingStock" : true,
+      "preferUnopened" : true,
+      "useLockedLot" : true,
+      "useLockedStock" : true
+    },
+    "positions" : [ {
+      "id" : "4a98ec11-b68b-43f9-8355-6cf4b0882e63",
+      "createdDate" : "2017-03-27T13:04:44+08:00",
+      "createdBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "modifiedDate" : "2017-04-01T13:50:43+08:00",
+      "modifiedBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "entityLock" : 0,
+      "warehouse" : {
+        "id" : "DEFAULT",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2017-03-10T08:06:28+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "admin"
+        },
+        "entityLock" : 0,
+        "name" : "DEFAULT",
+        "warehouseNo" : "DEFAULT"
+      },
+      "client" : {
+        "id" : "SYSTEM",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2016-10-18T15:36:00+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "entityLock" : 0,
+        "clientNo" : "SYSTEM",
+        "name" : "SYSTEM"
+      },
+      "amount" : 1.0000,
+      "amountPicked" : 2.0000,
+      "orderIndex" : 0,
+      "positionNo" : 1,
+      "partitionAllowed" : false,
+      "state" : 650,
+      "itemData" : {
+        "id" : "3d0ce5dc-983b-4c8d-8dc2-d1c75469c63d",
+        "createdDate" : "2017-02-14T02:51:28+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "modifiedDate" : "2017-04-07T16:06:00+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "entityLock" : 0,
+        "warehouse" : {
+          "id" : "DEFAULT",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2017-03-10T08:06:28+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "admin"
+          },
+          "entityLock" : 0,
+          "name" : "DEFAULT",
+          "warehouseNo" : "DEFAULT"
+        },
+        "client" : {
+          "id" : "SYSTEM",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2016-10-18T15:36:00+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "entityLock" : 0,
+          "clientNo" : "SYSTEM",
+          "name" : "SYSTEM"
+        },
+        "name" : "秘密花园:一本探索奇境的手绘涂色书",
+        "safetyStock" : 5,
+        "itemNo" : "6933890313356",
+        "skuNo" : "6933890313356",
+        "adviceMandatory" : true,
+        "lotMandatory" : false,
+        "restUsageGi" : 0,
+        "serialRecordType" : "NO_RECORD",
+        "scale" : 1,
+        "height" : 10.00,
+        "width" : 10.00,
+        "depth" : 10.00,
+        "volume" : 1000.000000,
+        "weight" : 20.000,
+        "multiplePart" : false,
+        "multiplePartAmount" : 0,
+        "measured" : false,
+        "preferOwnBox" : false,
+        "preferBag" : true,
+        "useBubbleFilm" : true,
+        "itemDataGlobalId" : "39731bb2-6da7-4ea0-b8b4-e6056d1e6d13",
+        "itemGroup" : {
+          "id" : "71956dbe-5bcf-4cea-b86b-ce1c4f3a177d",
+          "createdDate" : "2017-02-14T02:28:55+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-14T02:28:55+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "name" : "图书",
+          "orderIndex" : 1
+        },
+        "itemUnit" : {
+          "id" : "bd1cbebb-7755-482b-b351-8ded2a09e10f",
+          "createdDate" : "2017-02-14T02:33:21+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-03-21T11:54:49+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "name" : "单品",
+          "unitType" : "个",
+          "baseFactor" : 0
+        },
+        "itemSellingDegree" : {
+          "id" : "1c206697-7e8c-42a6-80a9-61042cdbad4f",
+          "createdDate" : "2017-02-14T02:55:23+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-14T02:55:23+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "name" : "A",
+          "fromRange" : 2.0000,
+          "toRange" : 5.0000,
+          "receiveDoc" : 5,
+          "replenishDoc" : 100,
+          "safetyDoc" : 1,
+          "totalDoc" : 106
+        }
+      },
+      "customerShipment" : {
+        "id" : "6a003a80-4c17-4418-9259-86e4aa0c2146",
+        "createdDate" : "2017-03-27T13:04:44+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "modifiedDate" : "2017-04-01T13:50:38+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "entityLock" : 0,
+        "warehouse" : {
+          "id" : "DEFAULT",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2017-03-10T08:06:28+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "admin"
+          },
+          "entityLock" : 0,
+          "name" : "DEFAULT",
+          "warehouseNo" : "DEFAULT"
+        },
+        "client" : {
+          "id" : "SYSTEM",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2016-10-18T15:36:00+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "entityLock" : 0,
+          "clientNo" : "SYSTEM",
+          "name" : "SYSTEM"
+        },
+        "customerName" : "B4",
+        "customerNo" : "B4",
+        "deliveryDate" : "2017-03-28T23:30:00+08:00",
+        "sortCode" : "SZ001",
+        "shipmentNo" : "920499958277164",
+        "priority" : 1,
+        "state" : 640,
+        "customerOrder" : {
+          "id" : "0fee1fd1-2468-4dc0-b4bd-7233ee4514fe",
+          "createdDate" : "2017-03-27T13:04:44+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-03-27T13:04:44+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "client" : {
+            "id" : "SYSTEM",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2016-10-18T15:36:00+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "entityLock" : 0,
+            "clientNo" : "SYSTEM",
+            "name" : "SYSTEM"
+          },
+          "customerName" : "B4",
+          "customerNo" : "B4",
+          "deliveryDate" : "2017-03-28T23:30:00+08:00",
+          "sortCode" : "SZ001",
+          "orderNo" : "B4",
+          "priority" : 1,
+          "state" : 0,
+          "orderStrategy" : {
+            "id" : "6fa12923-85a1-4bb4-b30d-8474f24af711",
+            "createdDate" : "2017-02-15T03:17:42+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "mengmengsun"
+            },
+            "modifiedDate" : "2017-02-15T03:17:42+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "mengmengsun"
+            },
+            "entityLock" : 0,
+            "warehouse" : {
+              "id" : "DEFAULT",
+              "createdDate" : "2016-10-18T15:36:00+08:00",
+              "createdBy" : {
+                "entityLock" : 0,
+                "username" : "ADMIN"
+              },
+              "modifiedDate" : "2017-03-10T08:06:28+08:00",
+              "modifiedBy" : {
+                "entityLock" : 0,
+                "username" : "admin"
+              },
+              "entityLock" : 0,
+              "name" : "DEFAULT",
+              "warehouseNo" : "DEFAULT"
+            },
+            "client" : {
+              "id" : "SYSTEM",
+              "createdDate" : "2016-10-18T15:36:00+08:00",
+              "createdBy" : {
+                "entityLock" : 0,
+                "username" : "ADMIN"
+              },
+              "modifiedDate" : "2016-10-18T15:36:00+08:00",
+              "modifiedBy" : {
+                "entityLock" : 0,
+                "username" : "ADMIN"
+              },
+              "entityLock" : 0,
+              "clientNo" : "SYSTEM",
+              "name" : "SYSTEM"
+            },
+            "name" : "订货策略1",
+            "createShippingOrder" : true,
+            "createFollowupPicks" : true,
+            "manualCreationIndex" : true,
+            "preferMatchingStock" : true,
+            "preferUnopened" : true,
+            "useLockedLot" : true,
+            "useLockedStock" : true
+          },
+          "positions" : [ ]
+        },
+        "boxType" : {
+          "id" : "825c7005-12ae-4bcf-b63c-63cf25228a5e",
+          "createdDate" : "2017-02-15T03:12:07+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-15T03:12:07+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "client" : {
+            "id" : "SYSTEM",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2016-10-18T15:36:00+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "entityLock" : 0,
+            "clientNo" : "SYSTEM",
+            "name" : "SYSTEM"
+          },
+          "group" : "BAG",
+          "name" : "Bag1",
+          "height" : 250.00,
+          "width" : 330.00,
+          "depth" : 50.00,
+          "volume" : 4125000.000000,
+          "weight" : 0.100
+        },
+        "orderStrategy" : {
+          "id" : "6fa12923-85a1-4bb4-b30d-8474f24af711",
+          "createdDate" : "2017-02-15T03:17:42+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-15T03:17:42+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "client" : {
+            "id" : "SYSTEM",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2016-10-18T15:36:00+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "entityLock" : 0,
+            "clientNo" : "SYSTEM",
+            "name" : "SYSTEM"
+          },
+          "name" : "订货策略1",
+          "createShippingOrder" : true,
+          "createFollowupPicks" : true,
+          "manualCreationIndex" : true,
+          "preferMatchingStock" : true,
+          "preferUnopened" : true,
+          "useLockedLot" : true,
+          "useLockedStock" : true
+        },
+        "positions" : [ ]
+      }
+    },{
+      "id" : "4a98ec11-b68b-43f9-8355-6cf4b0882e63",
+      "createdDate" : "2017-03-27T13:04:44+08:00",
+      "createdBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "modifiedDate" : "2017-04-01T13:50:43+08:00",
+      "modifiedBy" : {
+        "entityLock" : 0,
+        "username" : "mengmengsun"
+      },
+      "entityLock" : 0,
+      "warehouse" : {
+        "id" : "DEFAULT",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2017-03-10T08:06:28+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "admin"
+        },
+        "entityLock" : 0,
+        "name" : "DEFAULT",
+        "warehouseNo" : "DEFAULT"
+      },
+      "client" : {
+        "id" : "SYSTEM",
+        "createdDate" : "2016-10-18T15:36:00+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "modifiedDate" : "2016-10-18T15:36:00+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "ADMIN"
+        },
+        "entityLock" : 0,
+        "clientNo" : "SYSTEM",
+        "name" : "SYSTEM"
+      },
+      "amount" : 2.0000,
+      "amountPicked" : 2.0000,
+      "orderIndex" : 0,
+      "positionNo" : 1,
+      "partitionAllowed" : false,
+      "state" : 650,
+      "itemData" : {
+        "id" : "3d0ce5dc-983b-4c8d-8dc2-d1c75469c63d",
+        "createdDate" : "2017-02-14T02:51:28+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "modifiedDate" : "2017-04-07T16:06:00+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "entityLock" : 0,
+        "warehouse" : {
+          "id" : "DEFAULT",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2017-03-10T08:06:28+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "admin"
+          },
+          "entityLock" : 0,
+          "name" : "DEFAULT",
+          "warehouseNo" : "DEFAULT"
+        },
+        "client" : {
+          "id" : "SYSTEM",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2016-10-18T15:36:00+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "entityLock" : 0,
+          "clientNo" : "SYSTEM",
+          "name" : "SYSTEM"
+        },
+        "name" : "PISEN 品胜 充电器 iPad苹果专用版适用苹果,iPad,iPhone等USB接口充电",
+        "safetyStock" : 5,
+        "itemNo" : "9787550252585",
+        "skuNo" : "9787550252585",
+        "adviceMandatory" : true,
+        "lotMandatory" : false,
+        "restUsageGi" : 0,
+        "serialRecordType" : "NO_RECORD",
+        "scale" : 1,
+        "height" : 10.00,
+        "width" : 10.00,
+        "depth" : 10.00,
+        "volume" : 1000.000000,
+        "weight" : 20.000,
+        "multiplePart" : false,
+        "multiplePartAmount" : 0,
+        "measured" : false,
+        "preferOwnBox" : false,
+        "preferBag" : true,
+        "useBubbleFilm" : true,
+        "itemDataGlobalId" : "39731bb2-6da7-4ea0-b8b4-e6056d1e6d13",
+        "itemGroup" : {
+          "id" : "71956dbe-5bcf-4cea-b86b-ce1c4f3a177d",
+          "createdDate" : "2017-02-14T02:28:55+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-14T02:28:55+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "name" : "图书",
+          "orderIndex" : 1
+        },
+        "itemUnit" : {
+          "id" : "bd1cbebb-7755-482b-b351-8ded2a09e10f",
+          "createdDate" : "2017-02-14T02:33:21+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-03-21T11:54:49+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "name" : "单品",
+          "unitType" : "个",
+          "baseFactor" : 0
+        },
+        "itemSellingDegree" : {
+          "id" : "1c206697-7e8c-42a6-80a9-61042cdbad4f",
+          "createdDate" : "2017-02-14T02:55:23+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-14T02:55:23+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "name" : "A",
+          "fromRange" : 2.0000,
+          "toRange" : 5.0000,
+          "receiveDoc" : 5,
+          "replenishDoc" : 100,
+          "safetyDoc" : 1,
+          "totalDoc" : 106
+        }
+      },
+      "customerShipment" : {
+        "id" : "6a003a80-4c17-4418-9259-86e4aa0c2146",
+        "createdDate" : "2017-03-27T13:04:44+08:00",
+        "createdBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "modifiedDate" : "2017-04-01T13:50:38+08:00",
+        "modifiedBy" : {
+          "entityLock" : 0,
+          "username" : "mengmengsun"
+        },
+        "entityLock" : 0,
+        "warehouse" : {
+          "id" : "DEFAULT",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2017-03-10T08:06:28+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "admin"
+          },
+          "entityLock" : 0,
+          "name" : "DEFAULT",
+          "warehouseNo" : "DEFAULT"
+        },
+        "client" : {
+          "id" : "SYSTEM",
+          "createdDate" : "2016-10-18T15:36:00+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "modifiedDate" : "2016-10-18T15:36:00+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "ADMIN"
+          },
+          "entityLock" : 0,
+          "clientNo" : "SYSTEM",
+          "name" : "SYSTEM"
+        },
+        "customerName" : "B4",
+        "customerNo" : "B4",
+        "deliveryDate" : "2017-03-28T23:30:00+08:00",
+        "sortCode" : "SZ001",
+        "shipmentNo" : "920499958277164",
+        "priority" : 1,
+        "state" : 640,
+        "customerOrder" : {
+          "id" : "0fee1fd1-2468-4dc0-b4bd-7233ee4514fe",
+          "createdDate" : "2017-03-27T13:04:44+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-03-27T13:04:44+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "client" : {
+            "id" : "SYSTEM",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2016-10-18T15:36:00+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "entityLock" : 0,
+            "clientNo" : "SYSTEM",
+            "name" : "SYSTEM"
+          },
+          "customerName" : "B4",
+          "customerNo" : "B4",
+          "deliveryDate" : "2017-03-28T23:30:00+08:00",
+          "sortCode" : "SZ001",
+          "orderNo" : "B4",
+          "priority" : 1,
+          "state" : 0,
+          "orderStrategy" : {
+            "id" : "6fa12923-85a1-4bb4-b30d-8474f24af711",
+            "createdDate" : "2017-02-15T03:17:42+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "mengmengsun"
+            },
+            "modifiedDate" : "2017-02-15T03:17:42+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "mengmengsun"
+            },
+            "entityLock" : 0,
+            "warehouse" : {
+              "id" : "DEFAULT",
+              "createdDate" : "2016-10-18T15:36:00+08:00",
+              "createdBy" : {
+                "entityLock" : 0,
+                "username" : "ADMIN"
+              },
+              "modifiedDate" : "2017-03-10T08:06:28+08:00",
+              "modifiedBy" : {
+                "entityLock" : 0,
+                "username" : "admin"
+              },
+              "entityLock" : 0,
+              "name" : "DEFAULT",
+              "warehouseNo" : "DEFAULT"
+            },
+            "client" : {
+              "id" : "SYSTEM",
+              "createdDate" : "2016-10-18T15:36:00+08:00",
+              "createdBy" : {
+                "entityLock" : 0,
+                "username" : "ADMIN"
+              },
+              "modifiedDate" : "2016-10-18T15:36:00+08:00",
+              "modifiedBy" : {
+                "entityLock" : 0,
+                "username" : "ADMIN"
+              },
+              "entityLock" : 0,
+              "clientNo" : "SYSTEM",
+              "name" : "SYSTEM"
+            },
+            "name" : "订货策略1",
+            "createShippingOrder" : true,
+            "createFollowupPicks" : true,
+            "manualCreationIndex" : true,
+            "preferMatchingStock" : true,
+            "preferUnopened" : true,
+            "useLockedLot" : true,
+            "useLockedStock" : true
+          },
+          "positions" : [ ]
+        },
+        "boxType" : {
+          "id" : "825c7005-12ae-4bcf-b63c-63cf25228a5e",
+          "createdDate" : "2017-02-15T03:12:07+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-15T03:12:07+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "client" : {
+            "id" : "SYSTEM",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2016-10-18T15:36:00+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "entityLock" : 0,
+            "clientNo" : "SYSTEM",
+            "name" : "SYSTEM"
+          },
+          "group" : "BAG",
+          "name" : "Bag1",
+          "height" : 250.00,
+          "width" : 330.00,
+          "depth" : 50.00,
+          "volume" : 4125000.000000,
+          "weight" : 0.100
+        },
+        "orderStrategy" : {
+          "id" : "6fa12923-85a1-4bb4-b30d-8474f24af711",
+          "createdDate" : "2017-02-15T03:17:42+08:00",
+          "createdBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "modifiedDate" : "2017-02-15T03:17:42+08:00",
+          "modifiedBy" : {
+            "entityLock" : 0,
+            "username" : "mengmengsun"
+          },
+          "entityLock" : 0,
+          "warehouse" : {
+            "id" : "DEFAULT",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2017-03-10T08:06:28+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "admin"
+            },
+            "entityLock" : 0,
+            "name" : "DEFAULT",
+            "warehouseNo" : "DEFAULT"
+          },
+          "client" : {
+            "id" : "SYSTEM",
+            "createdDate" : "2016-10-18T15:36:00+08:00",
+            "createdBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "modifiedDate" : "2016-10-18T15:36:00+08:00",
+            "modifiedBy" : {
+              "entityLock" : 0,
+              "username" : "ADMIN"
+            },
+            "entityLock" : 0,
+            "clientNo" : "SYSTEM",
+            "name" : "SYSTEM"
+          },
+          "name" : "订货策略1",
+          "createShippingOrder" : true,
+          "createFollowupPicks" : true,
+          "manualCreationIndex" : true,
+          "preferMatchingStock" : true,
+          "preferUnopened" : true,
+          "useLockedLot" : true,
+          "useLockedStock" : true
+        },
+        "positions" : [ ]
+      }
+    }  ]
+  },
+  "reBinCellName" : "A01"
+}

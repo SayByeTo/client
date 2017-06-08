@@ -1,0 +1,30 @@
+<div style="height:40px;background:#517bca;">
+  <div class="titleRebin" style="width:300px;float:left;"></div>
+</div>
+<div>
+ <div>
+   <input  type="text" style="position: absolute;" class="k-textbox"  ng-keyup="pickingLicensePlates($event)"  ng-model="pickingLicensePlate"/>
+    <div style = "text-align:center;font-size:20px;margin-top:10px;font-weight:600;">请扫描拣货商品</div>
+ </div>
+ <div style = "height:150px" >
+   <div  ng-show="goodsContent">
+     <div style="margin:10px auto;width:280px;">
+       <div style="float:left;line-height:140px;width:140px;background:red;text-align:center;font-size:50px;color:white;">E01</div>
+          <div style="float:left;"><img height="140px;" width="140px;" src="image/20161022134004.png"></div>
+       </div>
+     </div>
+   </div>
+   <div style="height:{{mainHeight-200}}px;width:98%;margin:10px auto;background:#f2f2f2;">
+     <div  style = "line-height:30px;text-align:center;font-size:16px;font-weight:600;color:white;background:#3062bc;">
+        OB问题处理车
+        <kendo-button  class="k-primary" style="height:30px;float:right;font-size:14px;background:#ffff00;border:1px solid #ffff00;color:black" ng-click="returnBack()">{{'BACK' | translate }}</kendo-button>
+      </div>
+     <div style = "text-align:center;width:95%;margin:20px auto;height:75%;background:white;">
+       <table style="width:100%;height:100%;background:white;" cellspacing="10" cellpadding="10" >
+         <tr ng-repeat="column in col" >
+           <td style="background:#f2f2f2;"ng-repeat="rowValue in row" id ="problemCell{{column.colValue}}{{rowValue.name}}" >{{column.colValue}}{{rowValue.name}}</td>
+         </tr>
+       </table>
+     </div>
+  </div>
+</div>
